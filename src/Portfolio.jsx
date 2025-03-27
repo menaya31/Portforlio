@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./portfolio.css"
+import portfolio from './assets/portfolio'
 
 export default function Portfolio() {
   const [isVisible, setIsVisible] = useState({
@@ -226,7 +227,7 @@ export default function Portfolio() {
         <div className="hero-bg-pattern"></div>
       </section>
 
-      {/* About Section - from left */}
+      {/* About Section */}
       <section id="about" ref={aboutRef} className={`about-section ${isVisible.about ? "slide-in-left" : ""}`}>
         <div className="container-fluid px-4 px-md-5">
           <div className="section-title">
@@ -238,7 +239,8 @@ export default function Portfolio() {
               <div className="about-img">
                 <div className="img-placeholder">
                   <div className="inner-circle">
-                    <span>AJ</span>
+                    <span>MK</span>
+                    <img src={portfolio} alt="Portfolio Image" />
                   </div>
                 </div>
               </div>
@@ -247,31 +249,29 @@ export default function Portfolio() {
               <div className="about-content">
                 <h3>Computer Science Undergraduate</h3>
                 <p>
-                  I'm a passionate computer science student with a strong foundation in software development and
-                  problem-solving. My journey in tech began when I was 15, tinkering with HTML and CSS to build simple
-                  websites.
+                "I'm a Computer Science undergraduate passionate about UI/UX design, web development, and machine 
+                learning. I love creating user-friendly applications that solve real-world problems."
                 </p>
                 <p>
-                  Today, I'm focused on full-stack development, machine learning, and creating applications that solve
-                  real-world problems. When I'm not coding, you can find me participating in hackathons, contributing to
-                  open-source projects, or exploring the latest tech trends.
+                Always eager to learn and innovate, I explore AI and enjoy collaborating on exciting projects to
+                 push the boundaries of technology.
                 </p>
                 <div className="personal-info">
                   <div className="row">
                     <div className="col-md-6">
                       <div className="info-item">
-                        <span>Name:</span> Alex Johnson
+                        <span>Name:</span> Menaya Karunanayake
                       </div>
                       <div className="info-item">
-                        <span>Email:</span> alex.johnson@example.com
+                        <span>Email:</span> menayakarunanayake@gmail.com
                       </div>
                     </div>
                     <div className="col-md-6">
                       <div className="info-item">
-                        <span>Degree:</span> BSc Computer Science
+                        <span>Degree:</span> BSc (Hons) Computer Science
                       </div>
                       <div className="info-item">
-                        <span>Location:</span> Boston, MA
+                        <span>Location:</span> Sri Lanka
                       </div>
                     </div>
                   </div>
