@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./portfolio.css"
-import portfolio from './assets/portfolio'
+
 
 export default function Portfolio() {
   const [isVisible, setIsVisible] = useState({
@@ -239,9 +239,8 @@ export default function Portfolio() {
               <div className="about-img">
                 <div className="img-placeholder">
                   <div className="inner-circle">
-                    <span>MK</span>
-                    <img src={portfolio} alt="Portfolio Image" />
-                  </div>
+                    <img src="/portfolio.jpg" alt="Portfolio Image" className="portfolio-img" />
+                </div>
                 </div>
               </div>
             </div>
@@ -295,10 +294,10 @@ export default function Portfolio() {
           <div className="row">
             <div className="col-md-6">
               <div className="skills-category">
-                <h3>Programming Languages</h3>
+                <h3>Software Development</h3>
                 <div className="skill-item">
                   <div className="skill-name">
-                    <span>JavaScript</span>
+                    <span>Java</span>
                     <span>90%</span>
                   </div>
                   <div className="progress">
@@ -316,7 +315,7 @@ export default function Portfolio() {
                 </div>
                 <div className="skill-item">
                   <div className="skill-name">
-                    <span>Java</span>
+                    <span>Javascript</span>
                     <span>75%</span>
                   </div>
                   <div className="progress">
@@ -325,7 +324,7 @@ export default function Portfolio() {
                 </div>
                 <div className="skill-item">
                   <div className="skill-name">
-                    <span>C++</span>
+                    <span>MongoDB</span>
                     <span>70%</span>
                   </div>
                   <div className="progress">
@@ -366,7 +365,7 @@ export default function Portfolio() {
                 </div>
                 <div className="skill-item">
                   <div className="skill-name">
-                    <span>MongoDB</span>
+                    <span>Express</span>
                     <span>75%</span>
                   </div>
                   <div className="progress">
@@ -376,42 +375,7 @@ export default function Portfolio() {
               </div>
             </div>
           </div>
-          <div className="row mt-4">
-            <div className="col-12">
-              <div className="tech-icons">
-                <div className="tech-icon">
-                  <div className="icon-circle">
-                    <span>JS</span>
-                  </div>
-                  <p>JavaScript</p>
-                </div>
-                <div className="tech-icon">
-                  <div className="icon-circle">
-                    <span>PY</span>
-                  </div>
-                  <p>Python</p>
-                </div>
-                <div className="tech-icon">
-                  <div className="icon-circle">
-                    <span>RJ</span>
-                  </div>
-                  <p>React</p>
-                </div>
-                <div className="tech-icon">
-                  <div className="icon-circle">
-                    <span>ND</span>
-                  </div>
-                  <p>Node.js</p>
-                </div>
-                <div className="tech-icon">
-                  <div className="icon-circle">
-                    <span>DB</span>
-                  </div>
-                  <p>MongoDB</p>
-                </div>
-              </div>
-            </div>
-          </div>
+         
         </div>
       </section>
 

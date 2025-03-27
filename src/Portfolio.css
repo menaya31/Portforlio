@@ -3,7 +3,7 @@
     --primary-color: #78cdec;
     --secondary-color: #6c757d;
     --dark-color: #1f1e1e;
-    --darker-color: #0a0a0a;
+    --darker-color: #2b2a2a;
     --light-color: #f8f9fa;
     --success-color: #28a745;
     --danger-color: #dc3545;
@@ -470,41 +470,19 @@
     background-color: var(--darker-color);
   }
   
-  .about-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
   
-  .img-placeholder {
-    width: 300px;
-    height: 300px;
+  .portfolio-img{
+    width: 340px;
+    height: 360px;
     border-radius: 50%;
-    background-color: #1a1a1a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: var(--box-shadow);
-    position: relative;
-    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 30px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .portfolio-img:hover {
+    transform: scale(1.1);
   }
   
-  .inner-circle {
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #4a63e7 0%, #3b4fd7 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .inner-circle span {
-    font-size: 5rem;
-    color: #fff;
-    font-weight: 700;
-  }
   
   .about-content h3 {
     margin-bottom: 20px;
