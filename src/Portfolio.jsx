@@ -575,22 +575,17 @@ export default function Portfolio() {
                   </div>
                 </div>
                 <div className="social-links">
-                  <a href="#" className="social-icon">
-                    <div className="icon-circle">
-                      <span>GH</span>
-                    </div>
-                  </a>
-                  <a href="#" className="social-icon">
-                    <div className="icon-circle">
-                      <span>LI</span>
-                    </div>
-                  </a>
-                  <a href="#" className="social-icon">
-                    <div className="icon-circle">
-                      <span>TW</span>
-                    </div>
-                  </a>
-                </div>
+
+                <div className="social-icons">
+                <a href="https://github.com/menaya31" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/menaya-karunanayake-582b0a2aa/" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-linkedin"></i>
+                </a>
+            </div>
+
+            </div>
               </div>
             </div>
             <div className="col-md-6">

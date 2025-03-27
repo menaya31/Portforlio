@@ -781,27 +781,26 @@
     color: var(--text-muted);
   }
   
-  .social-links {
+  .social-icons {
     display: flex;
-    gap: 15px;
-    margin-top: 30px;
+    gap: 20px;
   }
   
-  .social-icon .icon-circle {
-    width: 50px;
-    height: 50px;
-    background-color: #1a1a1a;
-    transition: var(--transition);
+  .social-icons a {
+    font-size: 30px;
+    color: #78cdec;
+    text-decoration: none;
   }
   
-  .social-icon:hover .icon-circle {
-    background-color: var(--primary-color);
+  .social-icons a:hover {
+    color:  #b873a9; 
   }
   
-  .social-icon:hover .icon-circle span {
-    color: #fff;
+  .social-icons .fab {
+    transition: color 0.3s ease;
   }
   
+
   .contact-form {
     background-color: var(--card-bg);
     padding: 30px;
