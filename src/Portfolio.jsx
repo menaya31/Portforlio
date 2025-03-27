@@ -470,11 +470,11 @@ export default function Portfolio() {
               </div>
             </div>
           </div>
-          <div className="text-center mt-4">{/* Button removed as requested */}</div>
+          <div className="text-center mt-4"></div>
         </div>
       </section>
 
-      {/* Education Section - from right */}
+      {/* Education Section*/}
       <section
         id="education"
         ref={educationRef}
@@ -489,46 +489,46 @@ export default function Portfolio() {
             <div className="timeline-item">
               <div className="timeline-dot"></div>
               <div className="timeline-content">
-                <h3>BSc in Computer Science</h3>
-                <h4>Boston University</h4>
-                <p className="timeline-date">2020 - Present</p>
+                <h3>BSc(Hons) Computer Science</h3>
+                <h4>University of Westminster, UK</h4>
+                <p className="timeline-date">2023 - Present</p>
                 <p>
-                  Pursuing a bachelor's degree with focus on artificial intelligence and web development. Current GPA:
-                  3.8/4.0
+                  Pursuing a bachelor's degree with focus on Software Development and Machine Learning. 
                 </p>
               </div>
             </div>
             <div className="timeline-item">
               <div className="timeline-dot"></div>
               <div className="timeline-content right">
-                <h3>Software Development Intern</h3>
-                <h4>TechStart Inc.</h4>
-                <p className="timeline-date">Summer 2022</p>
+                <h3>Data Entry Clerk</h3>
+                <h4>Paint Master Lanka (Pvt) Ltd</h4>
+                <p className="timeline-date">2022 - 2023</p>
                 <p>
-                  Developed and maintained web applications using React and Node.js. Collaborated with a team of 5
-                  developers to implement new features.
+                Worked as a Data Entry Clerk, gaining skills in data management, accuracy, and proficiency with 
+                tools like Excel.
                 </p>
               </div>
             </div>
             <div className="timeline-item">
               <div className="timeline-dot"></div>
               <div className="timeline-content">
-                <h3>Research Assistant</h3>
-                <h4>University AI Lab</h4>
-                <p className="timeline-date">2021 - 2022</p>
+                <h3>Foundation Certificate in Higher Education-IT</h3>
+                <h4>IIT, Sri Lanka</h4>
+                <p className="timeline-date">2022 - 2023</p>
                 <p>
-                  Assisted in research on computer vision algorithms. Co-authored a paper on efficient image recognition
-                  techniques.
+                Completed the IT Foundation Certificate, gaining key skills in Communication, Computing, and Business
+                 Science for undergraduate progression.
                 </p>
               </div>
             </div>
             <div className="timeline-item">
               <div className="timeline-dot"></div>
               <div className="timeline-content right">
-                <h3>High School Diploma</h3>
-                <h4>Lincoln High School</h4>
-                <p className="timeline-date">2016 - 2020</p>
-                <p>Graduated with honors. President of Computer Science Club.</p>
+                <h3>Diploma in English</h3>
+                <h4>British Council</h4>
+                <p className="timeline-date">2022-2023</p>
+                <p>Completed a Diploma in English, enhancing communication and language skills for professional and
+                 academic success.</p>
               </div>
             </div>
           </div>
@@ -553,7 +553,7 @@ export default function Portfolio() {
                   </div>
                   <div className="text">
                     <h4>Email</h4>
-                    <p>alex.johnson@example.com</p>
+                    <p>menayakarunanayake@gmail.com</p>
                   </div>
                 </div>
                 <div className="contact-item">
@@ -562,7 +562,7 @@ export default function Portfolio() {
                   </div>
                   <div className="text">
                     <h4>Phone</h4>
-                    <p>(123) 456-7890</p>
+                    <p> +94 74 224 6434</p>
                   </div>
                 </div>
                 <div className="contact-item">
@@ -571,7 +571,7 @@ export default function Portfolio() {
                   </div>
                   <div className="text">
                     <h4>Location</h4>
-                    <p>Boston, Massachusetts</p>
+                    <p>Ragama, Sri Lanka</p>
                   </div>
                 </div>
                 <div className="social-links">
@@ -621,13 +621,9 @@ export default function Portfolio() {
         <div className="container-fluid px-4 px-md-5">
           <div className="row">
             <div className="col-md-6">
-              <p>&copy; 2023 Alex Johnson. All Rights Reserved.</p>
+              <p>&copy; 2025 MenayaK. All Rights Reserved.</p>
             </div>
-            <div className="col-md-6 text-md-end">
-              <p>
-                Designed with <span className="heart">❤</span> by Alex Johnson
-              </p>
-            </div>
+
           </div>
         </div>
       </footer>

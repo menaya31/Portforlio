@@ -2,7 +2,7 @@
 :root {
     --primary-color: #78cdec;
     --secondary-color: #6c757d;
-    --dark-color: #1f1e1e;
+    --dark-color: #363636;
     --darker-color: #2b2a2a;
     --light-color: #f8f9fa;
     --success-color: #28a745;
@@ -207,10 +207,10 @@
     color: #fff;
   }
   
-  /* Update the navbar link styles to make them more visible */
+  
   .nav-link {
-    color: #ffffff !important; /* Make links fully white instead of semi-transparent */
-    font-weight: 600; /* Make the font weight bolder */
+    color: #ffffff !important; 
+    font-weight: 600; 
     margin: 0 10px;
     transition: var(--transition);
     position: relative;
@@ -218,11 +218,11 @@
   }
   
   .nav-link:hover {
-    color: var(--primary-color) !important; /* Change hover color to primary color for better visibility */
+    color: var(--primary-color) !important; 
   }
   
   .nav-link.active {
-    color: var(--primary-color) !important; /* Make active link primary color */
+    color: var(--primary-color) !important; 
   }
   
   .nav-link.active::after {
@@ -246,7 +246,7 @@
     overflow: hidden;
   }
   
-  /* Fix for content alignment */
+  
   .container-fluid {
     max-width: 1400px;
     margin: 0 auto;
@@ -379,7 +379,7 @@
     opacity: 0;
   }
   
-  /* Make sure the hero visual takes full width of its column */
+  
   .hero-visual {
     width: 100%;
     display: flex;
@@ -840,19 +840,19 @@
     color: var(--danger-color);
   }
   
-  /* Add smooth scrolling for the entire page */
+  
   html {
     scroll-behavior: smooth;
   }
   
-  /* Ensure all rows use full width */
+  
   .row {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
   }
   
-  /* Make sure section content is properly aligned */
+  
   section .section-title {
     width: 100%;
     text-align: center;
