@@ -3,9 +3,50 @@
 import { useEffect, useRef, useState } from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./portfolio.css"
+import emailjs from "@emailjs/browser"
 
 
 export default function Portfolio() {
+
+
+
+    
+const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+  });
+  
+  const [status, setStatus] = useState(""); 
+  
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  
+    emailjs.send(
+      "service_r82jsls",  
+      "template_coq2sn1",   
+      formData,
+      "KA8rhDsviYxOthN2t"      
+    )
+    .then(() => {
+      setStatus("Message sent successfully!");
+      setFormData({ name: "", email: "", subject: "", message: "" }); 
+    })
+    .catch((error) => {
+      console.error("Failed to send message:", error);
+      setStatus("Error sending message. Please try again.");
+    });
+  };
+
+  
+
+
+    
   const [isVisible, setIsVisible] = useState({
     about: false,
     skills: false,
@@ -25,7 +66,7 @@ export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("home")
 
   useEffect(() => {
-    // Set hero loaded after a small delay to trigger animations
+    
     setTimeout(() => {
       setHeroLoaded(true)
     }, 300)
@@ -40,7 +81,7 @@ export default function Portfolio() {
               [id]: true,
             }))
 
-            // Update active section for navbar
+            
             setActiveSection(id)
           }
         })
@@ -48,14 +89,14 @@ export default function Portfolio() {
       { threshold: 0.2 },
     )
 
-    // Observe all sections for animations
+    
     if (aboutRef.current) observer.observe(aboutRef.current)
     if (skillsRef.current) observer.observe(skillsRef.current)
     if (projectsRef.current) observer.observe(projectsRef.current)
     if (educationRef.current) observer.observe(educationRef.current)
     if (contactRef.current) observer.observe(contactRef.current)
 
-    // Also observe the home section
+    
     const homeSection = document.getElementById("home")
     if (homeSection) observer.observe(homeSection)
 
@@ -69,7 +110,7 @@ export default function Portfolio() {
     }
   }, [])
 
-  // Smooth scroll handler for navbar links
+  
   const handleNavLinkClick = (e) => {
     e.preventDefault()
     const targetId = e.target.getAttribute("href").substring(1)
@@ -535,7 +576,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Contact Section - from left */}
+      {/* Contact Section  */}
       <section id="contact" ref={contactRef} className={`contact-section ${isVisible.contact ? "slide-in-left" : ""}`}>
         <div className="container-fluid px-4 px-md-5">
           <div className="section-title">
@@ -588,25 +629,64 @@ export default function Portfolio() {
             </div>
               </div>
             </div>
-            <div className="col-md-6">
-              <form className="contact-form">
-                <div className="form-group mb-3">
-                  <input type="text" className="form-control" placeholder="Your Name" required />
-                </div>
-                <div className="form-group mb-3">
-                  <input type="email" className="form-control" placeholder="Your Email" required />
-                </div>
-                <div className="form-group mb-3">
-                  <input type="text" className="form-control" placeholder="Subject" required />
-                </div>
-                <div className="form-group mb-3">
-                  <textarea className="form-control" rows={5} placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary">
-                  Send Message
-                </button>
-              </form>
-            </div>
+            {/*contact form */}
+
+            {/* Contact Form */}
+      <div className="col-md-6">
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <div className="form-group mb-3">
+            <input
+              type="text"
+              name="name"
+              className="form-control"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group mb-3">
+            <input
+              type="email"
+              name="email"
+              className="form-control"
+              placeholder="Your Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group mb-3">
+            <input
+              type="text"
+              name="subject"
+              className="form-control"
+              placeholder="Subject"
+              value={formData.subject}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group mb-3">
+            <textarea
+              name="message"
+              className="form-control"
+              rows={5}
+              placeholder="Your Message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            ></textarea>
+          </div>
+          <button type="submit" className="btn btn-primary">Send Message</button>
+          {status && <p className="mt-3">{status}</p>}
+        </form>
+      </div>
+
+
+
+
+
           </div>
         </div>
       </section>
