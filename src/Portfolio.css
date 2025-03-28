@@ -747,24 +747,26 @@
   }
   
   .contact-item .icon {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-color: var(--primary-color);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 15px;
+    margin-right: 10px;
     color: #fff;
   }
   
   .contact-item .text h4 {
     margin-bottom: 5px;
     color: var(--text-color);
+    font-size: 16px;
   }
   
   .contact-item .text p {
     color: var(--text-muted);
+    font-size: 15px;
   }
   
   .social-icons {
@@ -856,6 +858,15 @@
     .section-title h2 {
       font-size: 2rem;
     }
+    .inner-circle{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .portfolio-img{
+      width: 300px;
+      height: 300px;
+    }
   }
   
   @media (max-width: 767px) {
@@ -909,6 +920,16 @@
     .contact-info {
       margin-bottom: 40px;
     }
+    .inner-circle{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   
+    }
+    .portfolio-img{
+      width: 300px;
+      height: 300px;
+    }
   }
   
   @media (max-width: 575px) {
@@ -923,6 +944,16 @@
     .btn {
       padding: 8px 20px;
       font-size: 0.9rem;
+    }
+    .inner-circle{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   
+    }
+    .portfolio-img{
+      width: 300px;
+      height: 300px;
     }
   }
   
