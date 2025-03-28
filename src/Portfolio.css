@@ -605,26 +605,9 @@
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   }
   
-  .project-img {
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .project-placeholder {
-    width: 100%;
-    height: 100%;
-    background-color: #1a1a1a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .project-placeholder span {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--primary-color);
+  .project-img{
+    width: 400px;
+    height: 250px;
   }
   
   .project-content {

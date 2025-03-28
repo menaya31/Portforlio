@@ -431,23 +431,18 @@ const [formData, setFormData] = useState({
           <div className="row">
             <div className="col-md-4 mb-4">
               <div className="project-card">
-                <div className="project-img">
-                  <div className="project-placeholder">
-                    <span>AI</span>
-                  </div>
-                </div>
+                
+                <img src="/chatbotimg.png" alt="Project Image" className="project-img" />    
                 <div className="project-content">
-                  <h3>AI Image Recognition</h3>
-                  <p>A machine learning project that identifies objects in images using TensorFlow and Python.</p>
+                  <h3>AI Customer Support Chatbot</h3>
+                  <p>An AI-powered chatbot built using prompt engineering and Google Gemini API, offering fast and
+                     personalized customer support for digital marketing platforms.</p>
                   <div className="project-tags">
-                    <span>Python</span>
-                    <span>TensorFlow</span>
-                    <span>ML</span>
+                    <span>Node js</span>
+                    <span>React js</span>
+                    <span>API</span>
                   </div>
                   <div className="project-links">
-                    <a href="#" className="btn btn-sm btn-outline-primary">
-                      View Demo
-                    </a>
                     <a href="#" className="btn btn-sm btn-outline-secondary">
                       GitHub
                     </a>
@@ -457,23 +452,17 @@ const [formData, setFormData] = useState({
             </div>
             <div className="col-md-4 mb-4">
               <div className="project-card">
-                <div className="project-img">
-                  <div className="project-placeholder">
-                    <span>WA</span>
-                  </div>
-                </div>
+              <img src="/propertyFinder.png" alt="Project Image" className="project-img" /> 
                 <div className="project-content">
-                  <h3>Weather App</h3>
-                  <p>A React-based weather application that provides real-time forecasts using OpenWeatherMap API.</p>
+                  <h3>Property Finder Website</h3>
+                  <p>A property finder website built with React, CSS, and Bootstrap, allowing users to fill out a 
+                    form that filters and displays relevant property listings based on their criteria.</p>
                   <div className="project-tags">
                     <span>React</span>
-                    <span>API</span>
+                    <span>Bootstrap</span>
                     <span>CSS</span>
                   </div>
                   <div className="project-links">
-                    <a href="#" className="btn btn-sm btn-outline-primary">
-                      View Demo
-                    </a>
                     <a href="#" className="btn btn-sm btn-outline-secondary">
                       GitHub
                     </a>
@@ -484,22 +473,19 @@ const [formData, setFormData] = useState({
             <div className="col-md-4 mb-4">
               <div className="project-card">
                 <div className="project-img">
-                  <div className="project-placeholder">
-                    <span>CM</span>
-                  </div>
+                <img src="/ticket.png" alt="Project Image" className="project-img" /> 
                 </div>
                 <div className="project-content">
-                  <h3>Campus Navigator</h3>
-                  <p>A mobile app that helps students navigate university campuses efficiently.</p>
+                  <h3>Ticket Management</h3> 
+                  <p>A ticket buying system developed using React, Java, and Spring Boot, providing users with a
+                     seamless interface to browse and purchase tickets online.</p>
                   <div className="project-tags">
-                    <span>React Native</span>
-                    <span>Maps API</span>
-                    <span>Firebase</span>
+                    <span>React js</span>
+                    <span>Java</span>
+                    <span>SpringBoot</span>
                   </div>
                   <div className="project-links">
-                    <a href="#" className="btn btn-sm btn-outline-primary">
-                      View Demo
-                    </a>
+
                     <a href="#" className="btn btn-sm btn-outline-secondary">
                       GitHub
                     </a>
@@ -507,6 +493,29 @@ const [formData, setFormData] = useState({
                 </div>
               </div>
             </div>
+
+            <div className="col-md-4 mb-4">
+              <div className="project-card">
+              <img src="/water.png" alt="Project Image" className="project-img" /> 
+                <div className="project-content">
+                  <h3></h3>
+                  <p>A group project creating a 'Life Below Water' website with HTML, CSS, and JavaScript, featuring
+                     content and a shop for sea products built with JavaScript.</p>
+                  <div className="project-tags">
+                    <span>HTML</span>
+                    <span>Javascript</span>
+                    <span>CSS</span>
+                  </div>
+                  <div className="project-links">
+                    <a href="#" className="btn btn-sm btn-outline-secondary">
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
           </div>
           <div className="text-center mt-4"></div>
         </div>
