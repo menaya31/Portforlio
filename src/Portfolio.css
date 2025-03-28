@@ -472,8 +472,8 @@
   
   
   .portfolio-img{
-    width: 340px;
-    height: 360px;
+    width: 350px;
+    height: 380px;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 30px;
@@ -500,6 +500,9 @@
   
   .info-item {
     margin-bottom: 15px;
+    background-color: #3b3d3b;
+    padding: 15px;
+    border-radius: 7px;
   }
   
   .info-item span {

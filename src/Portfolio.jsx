@@ -298,7 +298,7 @@ const [formData, setFormData] = useState({
                 </p>
                 <div className="personal-info">
                   <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-md-8">
                       <div className="info-item">
                         <span>Name:</span> Menaya Karunanayake
                       </div>
@@ -306,7 +306,7 @@ const [formData, setFormData] = useState({
                         <span>Email:</span> menayakarunanayake@gmail.com
                       </div>
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-8">
                       <div className="info-item">
                         <span>Degree:</span> BSc (Hons) Computer Science
                       </div>
@@ -316,9 +316,6 @@ const [formData, setFormData] = useState({
                     </div>
                   </div>
                 </div>
-                <a href="#" className="btn btn-primary mt-3">
-                  Download Resume
-                </a>
               </div>
             </div>
           </div>
