@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
-import "./portfolio.css"
+import "./Portfolio.css"
 import emailjs from "@emailjs/browser"
 
 
