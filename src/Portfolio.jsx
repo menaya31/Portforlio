@@ -289,12 +289,12 @@ const [formData, setFormData] = useState({
               <div className="about-content">
                 <h3>Computer Science Undergraduate</h3>
                 <p>
-                "I'm a Computer Science undergraduate passionate about UI/UX design, web development, and machine 
-                learning. I love creating user-friendly applications that solve real-world problems."
+                I’m a Computer Science undergraduate with a strong passion for Quality Assurance Engineering and
+                 a keen eye for detail. I thrive on ensuring software reliability, usability, and performance. 
                 </p>
                 <p>
-                Always eager to learn and innovate, I explore AI and enjoy collaborating on exciting projects to
-                 push the boundaries of technology.
+                 My approach is structured and user-focused — I believe quality is not just about finding bugs,
+                  but ensuring a seamless experience for users.
                 </p>
                 <div className="personal-info">
                   <div className="row">
@@ -311,7 +311,7 @@ const [formData, setFormData] = useState({
                         <span>Degree:</span> BSc (Hons) Computer Science
                       </div>
                       <div className="info-item">
-                        <span>Location:</span> Sri Lanka
+                        <span>Location:</span> Mahabage, Sri Lanka
                       </div>
                     </div>
                   </div>
@@ -336,7 +336,7 @@ const [formData, setFormData] = useState({
                 <div className="skill-item">
                   <div className="skill-name">
                     <span>Java</span>
-                    <span>90%</span>
+                    <span>85%</span>
                   </div>
                   <div className="progress">
                     <div className="progress-bar" style={{ width: "90%" }}></div>
@@ -345,7 +345,7 @@ const [formData, setFormData] = useState({
                 <div className="skill-item">
                   <div className="skill-name">
                     <span>Python</span>
-                    <span>85%</span>
+                    <span>80%</span>
                   </div>
                   <div className="progress">
                     <div className="progress-bar" style={{ width: "85%" }}></div>
@@ -362,7 +362,7 @@ const [formData, setFormData] = useState({
                 </div>
                 <div className="skill-item">
                   <div className="skill-name">
-                    <span>MongoDB</span>
+                    <span>REST API</span>
                     <span>70%</span>
                   </div>
                   <div className="progress">
@@ -377,7 +377,7 @@ const [formData, setFormData] = useState({
                 <div className="skill-item">
                   <div className="skill-name">
                     <span>React</span>
-                    <span>88%</span>
+                    <span>85%</span>
                   </div>
                   <div className="progress">
                     <div className="progress-bar" style={{ width: "88%" }}></div>
@@ -395,7 +395,7 @@ const [formData, setFormData] = useState({
                 <div className="skill-item">
                   <div className="skill-name">
                     <span>HTML/CSS</span>
-                    <span>95%</span>
+                    <span>90%</span>
                   </div>
                   <div className="progress">
                     <div className="progress-bar" style={{ width: "95%" }}></div>
@@ -404,7 +404,7 @@ const [formData, setFormData] = useState({
                 <div className="skill-item">
                   <div className="skill-name">
                     <span>Express</span>
-                    <span>75%</span>
+                    <span>70%</span>
                   </div>
                   <div className="progress">
                     <div className="progress-bar" style={{ width: "75%" }}></div>
@@ -430,6 +430,8 @@ const [formData, setFormData] = useState({
           </div>
           <div className="row">
             <div className="col-md-4 mb-4">
+              
+
               <div className="project-card">
                 
                 <img src="/chatbotimg.png" alt="Project Image" className="project-img" />    
@@ -549,9 +551,9 @@ const [formData, setFormData] = useState({
               <div className="timeline-content right">
                 <h3>Data Entry Clerk</h3>
                 <h4>Paint Master Lanka (Pvt) Ltd</h4>
-                <p className="timeline-date">2022 - 2023</p>
+                <p className="timeline-date">2024 - 2025</p>
                 <p>
-                Worked as a Data Entry Clerk, gaining skills in data management, accuracy, and proficiency with 
+                Worked as an Office and Reporting Assistant, gaining skills in data management, accuracy, and proficiency with 
                 tools like Excel.
                 </p>
               </div>
@@ -572,8 +574,8 @@ const [formData, setFormData] = useState({
               <div className="timeline-dot"></div>
               <div className="timeline-content right">
                 <h3>Diploma in English</h3>
-                <h4>British Council</h4>
-                <p className="timeline-date">2022-2023</p>
+                <h4>ICBT Campus</h4>
+                <p className="timeline-date">2023-2024</p>
                 <p>Completed a Diploma in English, enhancing communication and language skills for professional and
                  academic success.</p>
               </div>
