@@ -454,18 +454,18 @@ const [formData, setFormData] = useState({
             </div>
             <div className="col-md-4 mb-4">
               <div className="project-card">
-              <img src="/propertyFinder.png" alt="Project Image" className="project-img" /> 
+              <img src="/Bookstore.jpg" alt="Project Image" className="project-img" /> 
                 <div className="project-content">
-                  <h3>Property Finder Website</h3>
-                  <p>A property finder website built with React, CSS, and Bootstrap, allowing users to fill out a 
-                    form that filters and displays relevant property listings based on their criteria.</p>
+                  <h3>Bookstore API</h3>
+                  <p>A Java JAX-RS API for managing books, authors, customers, carts, and orders in an online bookstore. 
+                    Built with in-memory data storage and tested using Postman, it demonstrates RESTful principles. </p>
                   <div className="project-tags">
-                    <span>React</span>
-                    <span>Bootstrap</span>
-                    <span>CSS</span>
+                    <span>Java</span>
+                    <span>JAX-RS</span>
+                    <span>Postman</span>
                   </div>
                   <div className="project-links">
-                    <a href="https://github.com/menaya31" className="btn btn-sm btn-outline-secondary">
+                    <a href="https://github.com/menaya31/Bookstore-API" className="btn btn-sm btn-outline-secondary">
                       GitHub
                     </a>
                   </div>
@@ -495,17 +495,17 @@ const [formData, setFormData] = useState({
                 </div>
               </div>
             </div>
-
-            <div className="col-md-4 mb-4">
+            
+                        <div className="col-md-4 mb-4">
               <div className="project-card">
-              <img src="/water.png" alt="Project Image" className="project-img" /> 
+              <img src="/propertyFinder.png" alt="Project Image" className="project-img" /> 
                 <div className="project-content">
-                  <h3></h3>
-                  <p>A group project creating a 'Life Below Water' website with HTML, CSS, and JavaScript, featuring
-                     content and a shop for sea products built with JavaScript.</p>
+                  <h3>Property Finder Website</h3>
+                  <p>A property finder website built with React, CSS, and Bootstrap, allowing users to fill out a 
+                    form that filters and displays relevant property listings based on their criteria.</p>
                   <div className="project-tags">
-                    <span>HTML</span>
-                    <span>Javascript</span>
+                    <span>React</span>
+                    <span>Bootstrap</span>
                     <span>CSS</span>
                   </div>
                   <div className="project-links">
@@ -516,6 +516,7 @@ const [formData, setFormData] = useState({
                 </div>
               </div>
             </div>
+
 
 
           </div>
