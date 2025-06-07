@@ -280,7 +280,7 @@ const [formData, setFormData] = useState({
               <div className="about-img">
                 <div className="img-placeholder">
                   <div className="inner-circle">
-                    <img src="/portfolio.jpg" alt="Portfolio Image" className="portfolio-img" />
+                    <img src="/portforlio.jpg" alt="Portfolio Image" className="portfolio-img" />
                 </div>
                 </div>
               </div>
@@ -429,11 +429,31 @@ const [formData, setFormData] = useState({
             <div className="underline"></div>
           </div>
           <div className="row">
-            <div className="col-md-4 mb-4">
-              
 
+          <div className="col-md-4 mb-4">
               <div className="project-card">
-                
+                <div className="project-img">
+                <img src="/machine learning model.jpg" alt="Project Image" className="project-img" /> 
+                </div>
+                <div className="project-content">
+                  <h3>Breast Cancer Prediction Model</h3> 
+                  <p>Implemented a breast cancer prediction model that is able to predict patient's mortality status and survival period in months</p>
+                  <div className="project-tags">
+                    <span>Python</span>
+                    <span>Scikit-learn</span>
+                  </div>
+                  <div className="project-links">
+                      <a href="https://github.com/menaya31/Breast-Cancer-Prediction-Model" className="btn btn-sm btn-outline-secondary">
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div className="col-md-4 mb-4">
+              <div className="project-card">
                 <img src="/chatbotimg.png" alt="Project Image" className="project-img" />    
                 <div className="project-content">
                   <h3>AI Customer Support Chatbot</h3>
@@ -452,6 +472,7 @@ const [formData, setFormData] = useState({
                 </div>
               </div>
             </div>
+
             <div className="col-md-4 mb-4">
               <div className="project-card">
               <img src="/Bookstore.jpg" alt="Project Image" className="project-img" /> 
@@ -472,6 +493,7 @@ const [formData, setFormData] = useState({
                 </div>
               </div>
             </div>
+
             <div className="col-md-4 mb-4">
               <div className="project-card">
                 <div className="project-img">
@@ -487,8 +509,7 @@ const [formData, setFormData] = useState({
                     <span>SpringBoot</span>
                   </div>
                   <div className="project-links">
-
-                    <a href="https://github.com/menaya31" className="btn btn-sm btn-outline-secondary">
+                      <a href="https://github.com/menaya31" className="btn btn-sm btn-outline-secondary">
                       GitHub
                     </a>
                   </div>
@@ -496,7 +517,7 @@ const [formData, setFormData] = useState({
               </div>
             </div>
             
-                        <div className="col-md-4 mb-4">
+            <div className="col-md-4 mb-4">
               <div className="project-card">
               <img src="/propertyFinder.png" alt="Project Image" className="project-img" /> 
                 <div className="project-content">
