@@ -465,7 +465,7 @@ const [formData, setFormData] = useState({
                     <span>API</span>
                   </div>
                   <div className="project-links">
-                    <a href="https://github.com/menaya31" className="btn btn-sm btn-outline-secondary">
+                    <a href="https://github.com/SathijaDissanayake/SDGP-Promovio/tree/customer_support" className="btn btn-sm btn-outline-secondary">
                       GitHub
                     </a>
                   </div>
@@ -494,32 +494,10 @@ const [formData, setFormData] = useState({
               </div>
             </div>
 
-            <div className="col-md-4 mb-4">
-              <div className="project-card">
-                <div className="project-img">
-                <img src="/ticket.png" alt="Project Image" className="project-img" /> 
-                </div>
-                <div className="project-content">
-                  <h3>Ticket Management</h3> 
-                  <p>A ticket buying system developed using React, Java, and Spring Boot, providing users with a
-                     seamless interface to browse and purchase tickets online.</p>
-                  <div className="project-tags">
-                    <span>React js</span>
-                    <span>Java</span>
-                    <span>SpringBoot</span>
-                  </div>
-                  <div className="project-links">
-                      <a href="https://github.com/menaya31" className="btn btn-sm btn-outline-secondary">
-                      GitHub
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
             
             <div className="col-md-4 mb-4">
               <div className="project-card">
-              <img src="/propertyFinder.png" alt="Project Image" className="project-img" /> 
+              <img src="/property filter.jpg" alt="Project Image" className="project-img" /> 
                 <div className="project-content">
                   <h3>Property Finder Website</h3>
                   <p>A property finder website built with React, CSS, and Bootstrap, allowing users to fill out a 
@@ -530,7 +508,28 @@ const [formData, setFormData] = useState({
                     <span>CSS</span>
                   </div>
                   <div className="project-links">
-                    <a href="https://github.com/menaya31" className="btn btn-sm btn-outline-secondary">
+                    <a href="https://github.com/menaya31/Property-Filter" className="btn btn-sm btn-outline-secondary">
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-4 mb-4">
+              <div className="project-card">
+                <div className="project-img">
+                <img src="/plane management.jpg" alt="Project Image" className="project-img" /> 
+                </div>
+                <div className="project-content">
+                  <h3>Plane Ticket Management System</h3> 
+                  <p>The system is console based application developed in java that provides funtional platform 
+                    for managing flight tickets</p>
+                  <div className="project-tags">
+                    <span>Java</span>
+                  </div>
+                  <div className="project-links">
+                      <a href="https://github.com/menaya31/Plane-Management" className="btn btn-sm btn-outline-secondary">
                       GitHub
                     </a>
                   </div>
