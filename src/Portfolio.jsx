@@ -43,6 +43,42 @@ const [formData, setFormData] = useState({
     });
   };
 
+  const aboutP1Ref = useRef(null);
+  const aboutP2Ref = useRef(null);
+
+useEffect(() => {
+  const handleScroll = () => {
+    [aboutP1Ref, aboutP2Ref].forEach((ref) => {
+      const top = ref.current.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        ref.current.classList.add("slide-up-show");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
+const infoItemsRef = useRef([]);
+
+useEffect(() => {
+  const handleScroll = () => {
+    infoItemsRef.current.forEach((item) => {
+      const top = item.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        item.classList.add("slide-up-show");
+      }
+    });
+  };
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
+
+
+
+
   
 
 
@@ -127,6 +163,90 @@ const [formData, setFormData] = useState({
     }
   }
 
+
+
+
+useEffect(() => {
+    const cards = document.querySelectorAll(".project-card");
+
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const card = entry.target;
+            const index = [...cards].indexOf(card);
+
+            
+            setTimeout(() => {
+              card.classList.add("show");
+            }, index * 200); // 200ms delay between each card
+
+            obs.unobserve(card); // animate once
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    cards.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, []);
+
+
+
+  useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  if (contactRef.current) {
+    observer.observe(contactRef.current);
+  }
+
+  return () => {
+    if (contactRef.current) {
+      observer.unobserve(contactRef.current);
+    }
+  };
+}, []);
+
+
+
+
+
+useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    const items = educationRef.current.querySelectorAll(".timeline-item");
+    items.forEach((item) => observer.observe(item));
+
+    return () => {
+      items.forEach((item) => observer.unobserve(item));
+    };
+  }, []);
+
+
+
+
+
+
   return (
     <div className="portfolio-container dark-theme">
       {/* Navigation */}
@@ -152,6 +272,7 @@ const [formData, setFormData] = useState({
               <li className="nav-item">
                 <a
                   className={`nav-link ${activeSection === "about" ? "active" : ""}`}
+
                   href="#about"
                   onClick={handleNavLinkClick}
                 >
@@ -210,14 +331,15 @@ const [formData, setFormData] = useState({
                   <span className="greeting-line"></span>
                   <span>Welcome to my portfolio</span>
                 </div>
-                <h1 className={`${heroLoaded ? "slide-in-left" : ""}`}>
+                  <h1 className={`${heroLoaded ? "slide-in-left" : ""}`}>
+
                   Hello, I'm <span className="highlight">Menaya Karunanayake</span>
                 </h1>
                 <h2 className={`${heroLoaded ? "slide-in-right" : ""}`}>
                   <span className="typed-text">Computer Science Undergraduate</span>
                 </h2>
                 <div className={`hero-text ${heroLoaded ? "fade-in" : ""}`}>
-                  <p>Passionate about creating innovative solutions through code</p>
+                  <p>I love breaking things — so users don’t have to...</p>
                 </div>
                 <div className={`hero-buttons ${heroLoaded ? "slide-in-bottom" : ""}`}>
                   <a href="#projects" className="btn btn-primary me-3" onClick={handleNavLinkClick}>
@@ -243,16 +365,16 @@ const [formData, setFormData] = useState({
                   <div className="terminal-body">
                     <pre>
                       <code>
-                        {`function Developer() {
+                        {`function QATester() {
   const skills = [
-    "JavaScript", "React", 
-    "Java", "Python"
+    "Manual Testing", "Automation", 
+    "Selenium"
   ];
   
   return (
-    <div className="developer">
+    <div className="qa-tester">
       <h1>Hello World!</h1>
-      <p>Let's build something amazing!</p>
+      <p>Let's build something reliable!</p>
     </div>
   );
 }`}
@@ -269,7 +391,7 @@ const [formData, setFormData] = useState({
       </section>
 
       {/* About Section */}
-      <section id="about" ref={aboutRef} className={`about-section ${isVisible.about ? "slide-in-left" : ""}`}>
+      <section id="about" ref={aboutRef} >
         <div className="container-fluid px-4 px-md-5">
           <div className="section-title">
             <h2>About Me</h2>
@@ -288,34 +410,51 @@ const [formData, setFormData] = useState({
             <div className="col-md-7">
               <div className="about-content">
                 <h3>Computer Science Undergraduate</h3>
-                <p>
+
+                <p ref={aboutP1Ref} className="slide-up-hidden">
                 I’m a Computer Science undergraduate with a strong passion for Quality Assurance Engineering and
                  a keen eye for detail. I thrive on ensuring software reliability, usability, and performance. 
                 </p>
-                <p>
+                <p ref={aboutP2Ref} className="slide-up-hidden">
                  My approach is structured and user-focused — I believe quality is not just about finding bugs,
                   but ensuring a seamless experience for users.
                 </p>
-                <div className="personal-info">
-                  <div className="row">
-                    <div className="col-md-8">
-                      <div className="info-item">
-                        <span>Name:</span> Menaya Karunanayake
-                      </div>
-                      <div className="info-item">
-                        <span>Email:</span> menayakarunanayake@gmail.com
-                      </div>
-                    </div>
-                    <div className="col-md-8">
-                      <div className="info-item">
-                        <span>Degree:</span> BSc (Hons) Computer Science
-                      </div>
-                      <div className="info-item">
-                        <span>Location:</span> Mahabage, Sri Lanka
-                      </div>
-                    </div>
-                  </div>
+
+                <div
+                  className="info-item slide-up-hidden"
+                  ref={el => (infoItemsRef.current[0] = el)}
+                  
+                >
+                  <span>Name:</span> Menaya Karunanayake
                 </div>
+
+                <div
+                  className="info-item slide-up-hidden"
+                  ref={el => (infoItemsRef.current[1] = el)}
+                
+                >
+                  <span>Email:</span> menayakarunanayake@gmail.com
+                </div>
+
+                <div
+                  className="info-item slide-up-hidden"
+                  ref={el => (infoItemsRef.current[2] = el)}
+                  
+                >
+                  <span>Degree:</span> BSc (Hons) Computer Science
+                </div>
+
+                <div
+                  className="info-item slide-up-hidden"
+                  ref={el => (infoItemsRef.current[3] = el)}
+                  
+                >
+                  <span>Location:</span> Mahabage, Sri Lanka
+                </div>
+
+
+
+
               </div>
             </div>
           </div>
@@ -323,7 +462,7 @@ const [formData, setFormData] = useState({
       </section>
 
       {/* Skills Section - from right */}
-      <section id="skills" ref={skillsRef} className={`skills-section ${isVisible.skills ? "slide-in-right" : ""}`}>
+      <section id="skills">
         <div className="container-fluid px-4 px-md-5">
           <div className="section-title">
             <h2>My Skills</h2>
@@ -335,17 +474,8 @@ const [formData, setFormData] = useState({
                 <h3>Software Development</h3>
                 <div className="skill-item">
                   <div className="skill-name">
-                    <span>Java</span>
+                    <span>Java / Python</span>
                     <span>85%</span>
-                  </div>
-                  <div className="progress">
-                    <div className="progress-bar" style={{ width: "90%" }}></div>
-                  </div>
-                </div>
-                <div className="skill-item">
-                  <div className="skill-name">
-                    <span>Python</span>
-                    <span>80%</span>
                   </div>
                   <div className="progress">
                     <div className="progress-bar" style={{ width: "85%" }}></div>
@@ -353,7 +483,16 @@ const [formData, setFormData] = useState({
                 </div>
                 <div className="skill-item">
                   <div className="skill-name">
-                    <span>Javascript</span>
+                    <span>Object Oriented Programming</span>
+                    <span>80%</span>
+                  </div>
+                  <div className="progress">
+                    <div className="progress-bar" style={{ width: "80%" }}></div>
+                  </div>
+                </div>
+                <div className="skill-item">
+                  <div className="skill-name">
+                    <span>Javascript / React</span>
                     <span>75%</span>
                   </div>
                   <div className="progress">
@@ -373,19 +512,28 @@ const [formData, setFormData] = useState({
             </div>
             <div className="col-md-6">
               <div className="skills-category">
-                <h3>Web Technologies</h3>
+                <h3>Quality Assurance</h3>
                 <div className="skill-item">
                   <div className="skill-name">
-                    <span>React</span>
-                    <span>85%</span>
+                    <span>Manual Testing</span>
+                    <span>70%</span>
                   </div>
                   <div className="progress">
-                    <div className="progress-bar" style={{ width: "88%" }}></div>
+                    <div className="progress-bar" style={{ width: "70%" }}></div>
                   </div>
                 </div>
                 <div className="skill-item">
                   <div className="skill-name">
-                    <span>Node.js</span>
+                    <span>Automation Testing - Selenium</span>
+                    <span>75%</span>
+                  </div>
+                  <div className="progress">
+                    <div className="progress-bar" style={{ width: "75%" }}></div>
+                  </div>
+                </div>
+                <div className="skill-item">
+                  <div className="skill-name">
+                    <span>API Testing - Postman</span>
                     <span>80%</span>
                   </div>
                   <div className="progress">
@@ -394,20 +542,11 @@ const [formData, setFormData] = useState({
                 </div>
                 <div className="skill-item">
                   <div className="skill-name">
-                    <span>HTML/CSS</span>
-                    <span>90%</span>
+                    <span>Understanding of SDLC</span>
+                    <span>80%</span>
                   </div>
                   <div className="progress">
-                    <div className="progress-bar" style={{ width: "95%" }}></div>
-                  </div>
-                </div>
-                <div className="skill-item">
-                  <div className="skill-name">
-                    <span>Express</span>
-                    <span>70%</span>
-                  </div>
-                  <div className="progress">
-                    <div className="progress-bar" style={{ width: "75%" }}></div>
+                    <div className="progress-bar" style={{ width: "80%" }}></div>
                   </div>
                 </div>
               </div>
@@ -418,11 +557,8 @@ const [formData, setFormData] = useState({
       </section>
 
       {/* Projects Section - from left */}
-      <section
-        id="projects"
-        ref={projectsRef}
-        className={`projects-section ${isVisible.projects ? "slide-in-left" : ""}`}
-      >
+      <section id="projects">
+        
         <div className="container-fluid px-4 px-md-5">
           <div className="section-title">
             <h2>My Projects</h2>
@@ -545,11 +681,7 @@ const [formData, setFormData] = useState({
       </section>
 
       {/* Education Section*/}
-      <section
-        id="education"
-        ref={educationRef}
-        className={`education-section ${isVisible.education ? "slide-in-right" : ""}`}
-      >
+      <section id="education" ref={educationRef} className="education-section">
         <div className="container-fluid px-4 px-md-5">
           <div className="section-title">
             <h2>Education & Experience</h2>
@@ -572,7 +704,7 @@ const [formData, setFormData] = useState({
               <div className="timeline-content right">
                 <h3>Data Entry Clerk</h3>
                 <h4>Paint Master Lanka (Pvt) Ltd</h4>
-                <p className="timeline-date">2024 - 2025</p>
+                <p className="timeline-date">2024 - Present</p>
                 <p>
                 Worked as an Office and Reporting Assistant, gaining skills in data management, accuracy, and proficiency with 
                 tools like Excel.
@@ -606,7 +738,7 @@ const [formData, setFormData] = useState({
       </section>
 
       {/* Contact Section  */}
-      <section id="contact" ref={contactRef} className={`contact-section ${isVisible.contact ? "slide-in-left" : ""}`}>
+      <section id="contact" ref={contactRef} className="contact-section">
         <div className="container-fluid px-4 px-md-5">
           <div className="section-title">
             <h2>Get In Touch</h2>
@@ -658,7 +790,7 @@ const [formData, setFormData] = useState({
             </div>
               </div>
             </div>
-            {/*contact form */}
+
 
             {/* Contact Form */}
       <div className="col-md-6">
@@ -734,4 +866,3 @@ const [formData, setFormData] = useState({
     </div>
   )
 }
-

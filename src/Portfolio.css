@@ -587,6 +587,22 @@
   }
   
   /* Projects Section */
+
+  /* Start hidden & slightly below */
+.project-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.9s ease-out;
+  will-change: opacity, transform;
+}
+
+/* Become visible when observed */
+.project-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
   .projects-section {
     background-color: var(--darker-color);
   }
@@ -816,6 +832,29 @@
     color: var(--text-muted);
   }
   
+
+
+  @keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation only when active */
+.contact-section.active .contact-info {
+  animation: slideUp 0.7s ease forwards;
+}
+
+
+
+
+
+
   /* Footer */
   .footer {
     background-color: #0a0a0a;
@@ -845,6 +884,78 @@
     text-align: center;
   }
   
+
+  /* Slide up animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hidden by default */
+.slide-up-hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* Visible (animated) */
+.slide-up-show {
+  animation: slideUp 0.6s forwards;
+}
+
+.slide-up-hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.slide-up-show {
+  opacity: 1;
+  transform: translateY(0);
+  animation: slideUp 0.6s forwards;
+}
+
+
+
+
+/* Animation keyframes */
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Only animate WHEN .active is present */
+.timeline-item:nth-child(odd).active .timeline-content {
+  animation: slideLeft 0.7s ease forwards;
+}
+
+.timeline-item:nth-child(even).active .timeline-content {
+  animation: slideRight 0.7s ease forwards;
+}
+
+
+
   /* Media Queries */
   @media (max-width: 991px) {
     .hero-content h1 {
@@ -879,7 +990,7 @@
     }
   
     .hero-content h1 {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   
     .hero-content h2 {
@@ -938,7 +1049,7 @@
     }
   
     .section-title h2 {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
   
     .btn {
@@ -956,5 +1067,3 @@
       height: 300px;
     }
   }
-  
-  
